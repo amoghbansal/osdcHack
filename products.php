@@ -19,14 +19,14 @@ require("includes/common.php");
     <style>
         body
         {
-    background-color: #00ddff;
+    background-color: mustard;
         }
         #products-jumbotron
         {
             background-image:url("https://i.pinimg.com/originals/72/53/e6/7253e6c0f4ca19f6ba6b90ad2391a9aa.jpg");
         }
         .thumbnail:hover{
-            background-color: greenyellow;
+            background-color: pink;
             transform:scale(1.05);
             transition:1s;
 }
@@ -42,6 +42,100 @@ require("includes/common.php");
                 <center><h1> Code For Food </h1>
             </div>
             <hr>
+            <div id="money">
+            <h1>Donate Clothes: </h1>
+            <div class="row text-center">
+                <div class="col-md-4 col-sm-6 home-feature">
+                    <div class="thumbnail">
+                        <img src="img/hygienicclothes.jpeg" alt="" style="height:300px;width:400px;">
+                        <div class="caption">
+                            <h3>Providing Hygienic Clothes to Newly Born Children</h3>
+                            <p>Price: Rs. 200.00 per child </p>
+                            <?php if (!isset($_SESSION['email'])) { ?>
+                                <p><a href="login.php" role="button" class="btn btn-primary btn-block">Donate</a></p>
+                                <?php
+                            } else {
+                                if (check_if_added_to_cart(7)) { 
+                                    echo '<a href="#" class="btn btn-block btn-success" disabled>Added to cart</a>';
+                                } else {
+                                    ?>
+                                    <div>
+                                    <p>Quantity:
+                                        <button class="btn2" style="border-radius:50%;"><span class="glyphicon glyphicon-minus"></span></button>
+                                        <input id="quantity7" type="text" name="quantity" value=1 style="max-width:20%;" required>
+                                        <button class="btn1" style="border-radius:50%;"><span class="glyphicon glyphicon-plus"></span></button>
+                                    </p>
+                                    </div>
+                                    <a href="" onclick="this.href='cart-add.php?id=7&quantity='+document.getElementById('quantity7').value" name="add" value="add" class="btn btn-block btn-primary" >Add to cart</a>
+                                    <?php
+                                }
+                            }
+                            ?>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 home-feature">
+                    <div class="thumbnail">
+                        <img src="img/usedclothes.jpeg" alt="" style="height:300px;">
+                        <div class="caption">
+                            <h3>Donate used clothes to a person in your city</h3>
+                            <p>Price: FREE</p>
+                            <?php if (!isset($_SESSION['email'])) { ?>
+                                <p><a href="login.php" role="button" class="btn btn-primary btn-block">Donate</a></p>
+                                <?php
+                            } else {
+                                if (check_if_added_to_cart(9)) {
+                                    echo '<a href="#" class="btn btn-block btn-success" disabled>Added to cart</a>';
+                                } else {
+                                    ?>
+                                    <div>
+                                    <p>Quantity:
+                                        <button class="btn2" style="border-radius:50%;"><span class="glyphicon glyphicon-minus"></span></button>
+                                        <input id="quantity9" type="text" name="quantity" value=1 style="max-width:20%;" required>
+                                        <button class="btn1" style="border-radius:50%;"><span class="glyphicon glyphicon-plus"></span></button>
+                                    </p>
+                                    </div>
+                                    <a href="" onclick="this.href='cart-add.php?id=9&quantity='+document.getElementById('quantity9').value" name="add" value="add" class="btn btn-block btn-primary">Add to cart</a>
+                                    <?php
+                                }
+                            }
+                            ?>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 home-feature">
+                    <div class="thumbnail">
+                        <img src="img/blanketdonations.jpg" alt="" style="height:290px;">
+                        <div class="caption">
+                            <h3>Blanket Donations</h3>
+                            <p style="padding-top:25px;">Price: Rs. 300.00 per person</p>
+                            <?php if (!isset($_SESSION['email'])) { ?>
+                                <p><a href="login.php" role="button" class="btn btn-primary btn-block">Donate</a></p>
+                                <?php
+                            } else {
+                                if (check_if_added_to_cart(11)) { 
+                                    echo '<a href="#" class="btn btn-block btn-success" disabled>Added to cart</a>';
+                                } else {
+                                    ?>
+                                    <div>
+                                    <p>Quantity:
+                                        <button class="btn2" style="border-radius:50%;"><span class="glyphicon glyphicon-minus"></span></button>
+                                        <input id="quantity11" type="text" name="quantity" value=1 style="max-width:20%;" required>
+                                        <button class="btn1" style="border-radius:50%;"><span class="glyphicon glyphicon-plus"></span></button>
+                                    </p>
+                                    </div>
+                                    <a href="" onclick="this.href='cart-add.php?id=11&quantity='+document.getElementById('quantity11').value" name="add" value="add" class="btn btn-block btn-primary buy">Add to cart</a>
+                                    <?php
+                                }
+                            }
+                            ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div id="money">
             <h1>Donate Money: </h1>
             <div class="row text-center">
@@ -199,7 +293,6 @@ require("includes/common.php");
                         </div>
                     </div>
                 </div>
-
                 <div class="col-md-4 col-sm-6 home-feature">
                     <div class="thumbnail">
                         <img src="img/child.jpg" alt="" style="height:290px;width:400px;">
@@ -260,34 +353,7 @@ require("includes/common.php");
                             ?>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 col-sm-6 home-feature">
-                    <div class="thumbnail">
-                        <img src="img/logo1.jpg" alt="" style="height:290px;">
-                        <div class="caption">
-                            <h3>Donations for our Organization</h3>
-                            <?php if (!isset($_SESSION['email'])) { ?>
-                                <p><a href="login.php" role="button" class="btn btn-primary btn-block">Donate</a></p>
-                                <?php
-                            } else {
-                                if (donate_amount(1)) { 
-                                    echo '<a href="#" class="btn btn-block btn-success" disabled>Added to cart</a>';
-                                } else {
-                                    ?>
-                                    <div>
-                                    <p>
-                                        Amount:Rs.<input id="amount" type="text" name="amount" value=1 style="max-width:20%;" required>
-                                    </p>
-                                    </div>
-                                    <a href="" onclick="this.href='donate-add.php?id=1&amount='+document.getElementById('amount').value" name="add" value="add" class="btn btn-block btn-primary buy">Add to cart</a>
-                                    <?php
-                                }
-                            }
-                            ?>
-                        </div>
-                    </div>
-                </div>
-                
+                </div>                
             </div>
             </div>
             <div id="food">
