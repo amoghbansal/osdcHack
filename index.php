@@ -40,7 +40,7 @@ if(isset($_SESSION['email'])) {
                 <p style="font-size:18px;padding-left:10px;padding-right:10px;">
                     We started as an organization dedicated to being the go-to source for the latest news and insights on global injustices. Back then, our goal was to improve health and wellness for all, whether that be advocating for proper veteran care, highlighting food deserts in the country or spreading awareness on Food security, conditions and issues.<br>
                     We aim to redistribute surplus food to those who are in need of it. We as an organization feed the needy and in-distress people through joint efforts. We mobilise, empower and strengthen the homeless so that they have access to their food needs and also can assert their rights and live with honour and dignity.<br>
-                    Over the past few years, the organization has grown significantly and expanded its coverage to include other areas where hope and support is much needed, such as:<br>
+                    Over the past few years, the organization has grown significantly and expanded its coverage to include other areas where support is much needed, such as:<br>
                     • Poverty<br>
                     • Avoid Food Waste<br>
                     • Malnutrition<br>
