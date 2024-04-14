@@ -1,8 +1,8 @@
 # osdcHack
--> Enhanced the HackAgainstHunger web application to include features for mid-day meals, clothes, and blanket donations. 
--> The platform now allows users to register, donate food, contribute financial aid, and support with clothing and blankets.
--> Tools & Technologies Used: HTML 5, CSS 3, JavaScript, Bootstrap v3.3.7, PHP, MySQL, phpMyAdmin, GitHub, NetBeans IDE.
--> Enhanced the platform to incorporate mid-day meals, clothing, and blanket donations, maintaining a responsive front end with HTML5, CSS3, and Bootstrap. 
+-> Enhanced the HackAgainstHunger web application to include features for mid-day meals, clothes, and blanket donations.  
+-> The platform now allows users to register, donate food, contribute financial aid, and support with clothing and blankets.  
+-> Tools & Technologies Used: HTML 5, CSS 3, JavaScript, Bootstrap v3.3.7, PHP, MySQL, phpMyAdmin, GitHub, NetBeans IDE.  
+-> Enhanced the platform to incorporate mid-day meals, clothing, and blanket donations, maintaining a responsive front end with HTML5, CSS3, and Bootstrap.  
 -> Implemented JavaScript for an interactive user interface, while PHP handled server-side functionalities and MySQL interactions; overcoming challenges like time
    constraints and clarifying problem statements during development.
 
